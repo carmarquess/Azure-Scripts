@@ -12,7 +12,7 @@ Este script PowerShell permite atualizar as tags de recursos na plataforma Azure
 1. Clone este repositório para o seu ambiente local.
 2. Certifique-se de ter instalado os módulos Az PowerShell e ImportExcel.
 3. Abra o PowerShell e navegue até o diretório do repositório clonado.
-4. Execute o script `Update-AzureTags.ps1` fornecendo as informações solicitadas:
+4. Execute o script `Update-AzureResourceTags.ps1` fornecendo as informações solicitadas:
    - Subscription ID: ID da assinatura da Azure.
    - Caminho completo do arquivo Excel: Caminho para o arquivo Excel contendo as tags e recursos.
    - Operation: Operação para atualização das tags ("merge", "delete" ou "replace").
