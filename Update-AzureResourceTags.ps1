@@ -63,7 +63,7 @@ try {
 
 $dataTable = $excelData | Select-Object -Property Resource, OWNER, SUPPORT, DESCRIPTION, ENVIRONMENT, COST, CRITICAL, POWERSTART, POWERSTOP, RESOURCEGROUP
 
-# Exibindo um resumo das alterações que serão realizadas
+# Exibindo um resumo das alteracoes que serão realizadas
 Write-Host "Resumo das alterações:"
 foreach ($row in $dataTable) {
     $resourceName = $row.Resource
@@ -86,19 +86,19 @@ foreach ($row in $dataTable) {
     Write-Host
 }
 
-# Solicitando confirmação para atualização das tags
-$confirmation = Read-Host "Deseja prosseguir com a atualização das tags? (S/N)"
+# Solicitando confirmacao para atualizacao das tags
+$confirmation = Read-Host "Deseja prosseguir com a atualizacao das tags? (S/N)"
 
 if ($confirmation.ToUpper() -ne "S") {
-    Write-Host "Atualização das tags cancelada."
+    Write-Host "Atualizacao das tags cancelada."
     return
 }
 
-# Solicitando o tipo de operação para a atualização das tags
-$operation = Read-Host "Informe o tipo de operação para a atualização das tags (merge, delete ou replace)"
+# Solicitando o tipo de operacao para a atualizacao das tags
+$operation = Read-Host "Informe o tipo de operacao para a atualizacao das tags (merge, delete ou replace)"
 
 if ($operation -ne "merge" -and $operation -ne "delete" -and $operation -ne "replace") {
-    Write-Host "Operação inválida. A atualização das tags foi cancelada."
+    Write-Host "Operacao inválida. A atualizacao das tags foi cancelada."
     return
 }
 
@@ -146,4 +146,4 @@ foreach ($row in $dataTable) {
     Write-Host
 }
 
-Write-Host "Atualização de tags concluída."
+Write-Host "Atualizacao de tags concluida."
